@@ -1,0 +1,34 @@
+{
+  "name": "api-gateway",
+  "version": "1.0.0",
+  "description": "API Gateway that connects Paidify client app to its services. It handles services availability by applying the SOA pattern Circuit Breaker.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/",
+    "dev": "nodemon src/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Payuu-design/api-gateway.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Payuu-design/api-gateway/issues"
+  },
+  "homepage": "https://github.com/Payuu-design/api-gateway#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "helmet": "^6.0.0",
+    "morgan": "^1.10.0",
+    "mysql2": "^2.3.3",
+    "node-fetch": "^3.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "type": "module"
+}
