@@ -47,7 +47,7 @@ export default async function (req, res) {
     delete req.headers['content-length'];
 
     let response;
-    console.log('fetching', newInst.url + req);
+    console.log('fetching', newInst.url + req.url);
     console.log({
         method: req.method,
         headers: req.headers,
