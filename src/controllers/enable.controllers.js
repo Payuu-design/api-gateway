@@ -4,7 +4,11 @@ import { updateOne } from '../helpers/crud.js';
 export default async function (req, res) {
     const { id } = req.params;
     let { value } = req.body;
+    
+    console.log(id, value);
     if(!id || value !== 0 && value !== 1) {
+        console.log('!id', !id);
+        console.log('valie !== 0 && value !== 1', value !== 0 && value !== 1);
         return res.status(400).json({ message: 'Bad Request' });
     }
 
