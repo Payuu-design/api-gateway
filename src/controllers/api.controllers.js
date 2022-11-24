@@ -47,7 +47,7 @@ export default async function (req, res) {
     delete req.headers['content-length'];
     delete req.headers['if-none-match'];
 
-    // let response;
+    let response;
     // console.log('fetching', newInst.url + req.url);
     // console.log({
     //     method: req.method,
