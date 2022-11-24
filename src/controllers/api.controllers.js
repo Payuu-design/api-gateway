@@ -47,6 +47,13 @@ export default async function (req, res) {
     delete req.headers['content-length'];
 
     let response;
+    console.log('fetching', newInst.url + req);
+    console.log({
+        method: req.method,
+        headers: req.headers,
+        body: req.body,
+        timeout: 10000
+    });
     try {
         response = await fetch(newInst.url + req.url, {
             method: req.method,
