@@ -25,7 +25,6 @@ export default async function(url, options) {
             data: await (res.headers.get('content-type').includes('application/json') ? res.json() : res.text())
         };
     } catch(err) {
-        console.log(err);
         if(err instanceof AbortError) throw new Error('Timeout');
         throw err;
     } finally {

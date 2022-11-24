@@ -45,15 +45,16 @@ export default async function (req, res) {
     
     delete req.headers.host;
     delete req.headers['content-length'];
+    delete req.headers['if-none-match'];
 
-    let response;
-    console.log('fetching', newInst.url + req.url);
-    console.log({
-        method: req.method,
-        headers: req.headers,
-        body: req.body,
-        timeout: 10000
-    });
+    // let response;
+    // console.log('fetching', newInst.url + req.url);
+    // console.log({
+    //     method: req.method,
+    //     headers: req.headers,
+    //     body: req.body,
+    //     timeout: 10000
+    // });
     try {
         response = await fetch(newInst.url + req.url, {
             method: req.method,
