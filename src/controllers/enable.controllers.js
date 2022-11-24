@@ -22,12 +22,12 @@ export async function enable (req, res) {
 export async function enablePOST (req, res) {
     const { id, value } = req.params;
     
-    console.log(id, value);
-    if(!id || value !== 0 && value !== 1) {
-        console.log('!id', !id);
-        console.log('valie !== 0 && value !== 1', value !== 0 && value !== 1);
-        return res.status(400).json({ message: 'Bad Request' });
-    }
+    console.log('id', id, 'value', value);
+    // if(!id || value !== 0 && value !== 1) {
+    //     console.log('!id', !id);
+    //     console.log('valie !== 0 && value !== 1', value !== 0 && value !== 1);
+    //     return res.status(400).json({ message: 'Bad Request' });
+    // }
 
     try {
         await updateOne('service', { enabled: value }, { id }, pool);
