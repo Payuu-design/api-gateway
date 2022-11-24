@@ -3,6 +3,6 @@ import enable from '../controllers/enable.controllers.js';
 
 const router = Router();
 
-router.put('/', enable);
+router.put('/:id', enable);
 
 export default router;
