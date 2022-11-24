@@ -2,6 +2,7 @@ import express from 'express';
 import morgan from 'morgan';
 import helmet from 'helmet';
 import cors from 'cors';
+import bodyParser from 'body-parser';
 import routes from './routes/index.routes.js';
 import pool from './services/db.js';
 
@@ -9,6 +10,8 @@ const app = express();
 
 app.set('json spaces', 2);
 app.use(express.json());
+// app.use(express.bodyParser());
+app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev'));
 app.use(helmet());
